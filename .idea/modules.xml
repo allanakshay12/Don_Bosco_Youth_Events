@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DonBoscoYouth-EventClient.iml" filepath="$PROJECT_DIR$/DonBoscoYouth-EventClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Don_Bosco_Youth_Events.iml" filepath="$PROJECT_DIR$/Don_Bosco_Youth_Events.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
