@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "789379696599",
+    "firebase_url": "https://donboscoyouthevents.firebaseio.com",
+    "project_id": "donboscoyouthevents",
+    "storage_bucket": "donboscoyouthevents.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789379696599:android:855365220db5f976",
+        "android_client_info": {
+          "package_name": "com.allanakshay.donboscoyouth_eventclient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789379696599-k67uitm36iah04a8vi3b94ia3miap637.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.allanakshay.donboscoyouth_eventclient",
+            "certificate_hash": "40174da76f1d5341df3eb780d1dd508530569385"
+          }
+        },
+        {
+          "client_id": "789379696599-v8h1svfqali19hcf310hm2sc3282uapq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZqwTspO_vLVGnV7Nd5--bnZfCeM88eFs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789379696599-v8h1svfqali19hcf310hm2sc3282uapq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
