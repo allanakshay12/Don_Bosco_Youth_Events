@@ -6,4 +6,5 @@
     <string name="title_activity_games_">Games_Activity</string>
     <string name="title_activity_register__new">Register_New</string>
     <string name="title_activity_recharge__existing">Recharge_Existing</string>
+    <string name="title_activity_game__selected">Game_Selected</string>
 </resources>

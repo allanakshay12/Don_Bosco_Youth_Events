@@ -9,9 +9,20 @@
     tools:showIn="@layout/activity_canteen_"
     android:padding="10dp">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/canteen_go"
+        android:drawableLeft="@drawable/go"
+        android:background="@color/colorAccent" />
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/canteen_go"
         android:layout_marginTop="30dp"
         android:id="@+id/text_input_canteen_unique_id">
         <EditText

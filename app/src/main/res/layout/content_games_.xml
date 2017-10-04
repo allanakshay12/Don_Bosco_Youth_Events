@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,4 +8,20 @@
     tools:context="com.allanakshay.donboscoyouth_eventclient.Games_Activity"
     tools:showIn="@layout/activity_games_">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview_games"
+        android:text="Select your game"
+        android:textColor="@color/Button_Text"
+        android:background="@color/Button_Background"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+    <ListView
+        android:layout_below="@id/textview_games"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/games_list_view"/>
+
+</RelativeLayout>

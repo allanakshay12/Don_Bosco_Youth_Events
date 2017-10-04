@@ -12,10 +12,21 @@
     tools:showIn="@layout/activity_recharge__existing"
     android:padding="20dp">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/recharge_existing_go"
+        android:drawableLeft="@drawable/go"
+        android:background="@color/colorAccent" />
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
+        android:layout_toLeftOf="@id/recharge_existing_go"
         android:id="@+id/text_input_recharge_unique_id">
         <EditText
             android:id="@+id/recharge_existing_unique_id"
@@ -59,12 +70,23 @@
         android:id="@+id/recharge_existing_balance_amount"
         android:enabled="false"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recharge_existing_balance_amount"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentLeft="true"
+        android:text="Overall Points : "
+        android:textSize="20dp"
+        android:id="@+id/recharge_existing_overall_points"
+        android:enabled="false"/>
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/recharge_existing_balance_amount"
+        android:layout_below="@id/recharge_existing_overall_points"
         android:id="@+id/text_input_recharge_recharge_amount">
         <EditText
             android:id="@+id/recharge_existing_recharge_amount"
@@ -76,6 +98,8 @@
             android:enabled="false"/>
     </android.support.design.widget.TextInputLayout>
 
+
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -84,7 +108,9 @@
         android:layout_marginTop="70dp"
         android:background="@color/Button_Background"
         android:textColor="@color/Button_Text"
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        android:enabled="false"
+        android:id="@+id/recharge_existing_recharge_button"/>
 
 </RelativeLayout>
 </ScrollView>

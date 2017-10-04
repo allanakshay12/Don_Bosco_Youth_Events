@@ -55,6 +55,10 @@
         <activity
             android:name=".Recharge_Existing"
             android:label="@string/title_activity_recharge__existing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Game_Selected"
+            android:label="@string/title_activity_game__selected"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

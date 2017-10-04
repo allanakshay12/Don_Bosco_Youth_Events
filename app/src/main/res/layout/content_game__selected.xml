@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.allanakshay.donboscoyouth_eventclient.Game_Selected"
+    tools:showIn="@layout/activity_game__selected"
+    android:padding="10dp">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/text_input_game_selected_unique_id">
+        <EditText
+            android:id="@+id/game_selected_unique_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:enabled="false"
+            android:hint="Unique ID"
+            android:textSize="20dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_input_game_selected_unique_id"
+        android:layout_marginTop="30dp"
+        android:text="Name : "
+        android:enabled="false"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/game_selected_name"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_selected_name"
+        android:layout_marginTop="30dp"
+        android:text="Phone Number : "
+        android:enabled="false"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/game_selected_phone_number"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_selected_phone_number"
+        android:layout_marginTop="30dp"
+        android:text="Balance : "
+        android:textStyle="bold"
+        android:enabled="false"
+        android:textSize="20dp"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/game_selected_balance"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_selected_balance"
+        android:layout_marginTop="30dp"
+        android:text="Played Previously : "
+        android:textStyle="bold"
+        android:enabled="false"
+        android:textSize="20dp"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/game_selected_played_previously"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_selected_played_previously"
+        android:layout_marginTop="30dp"
+        android:text="Qualified : "
+        android:enabled="false"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/game_selected_qualified"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@color/Button_Background"
+        android:textColor="@color/Button_Text"
+        android:enabled="false"
+        android:layout_below="@id/game_selected_qualified"
+        android:layout_marginTop="30dp"
+        android:text="Charge User"
+        android:id="@+id/game_selected_charge_user"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@color/Button_Background"
+        android:textColor="@color/Button_Text"
+        android:layout_below="@id/game_selected_charge_user"
+        android:enabled="false"
+        android:layout_marginTop="30dp"
+        android:text="Qualify User"
+        android:id="@+id/game_selected_qualify_user"/>
+
+
+</RelativeLayout>
+</ScrollView>

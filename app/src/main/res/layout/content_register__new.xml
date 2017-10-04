@@ -29,7 +29,7 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
         android:layout_below="@id/text_input_name"
         android:id="@+id/text_input_phone_number">
         <EditText
@@ -44,7 +44,7 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
         android:layout_below="@id/text_input_phone_number"
         android:id="@+id/text_input_unique_id">
         <EditText
@@ -59,7 +59,7 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
         android:layout_below="@id/text_input_unique_id"
         android:id="@+id/text_input_initial_recharge">
         <EditText
@@ -75,9 +75,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_input_initial_recharge"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
         android:textSize="20dp"
         android:text="Register User"
+        android:id="@+id/register_user_button"
+        android:onClick="Register"
         android:textColor="@color/Button_Text"
         android:background="@color/Button_Background"/>
 
