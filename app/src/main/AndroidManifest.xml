@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.allanakshay.donboscoyouth_eventclient" >
+    package="com.allanakshay.donboscoyouth_eventclient">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <service
             android:name=".NotificationHandle"
             android:enabled="true"
@@ -29,13 +29,25 @@
         <activity
             android:name=".MainPage"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Cashier_activity"
+            android:label="@string/title_activity_cashier_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Canteen_Activity"
+            android:label="@string/title_activity_canteen_"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Games_Activity"
+            android:label="@string/title_activity_games_"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

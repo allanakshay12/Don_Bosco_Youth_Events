@@ -1,5 +1,6 @@
 package com.allanakshay.donboscoyouth_eventclient;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,6 +12,8 @@ import android.view.MenuItem;
 
 public class MainPage extends AppCompatActivity {
 
+    Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,14 +21,6 @@ public class MainPage extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
@@ -48,5 +43,21 @@ public class MainPage extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void Games(View view)
+    {
+        intent = new Intent(MainPage.this, Games_Activity.class);
+        startActivity(intent);
+    }
+    public void Canteen(View view)
+    {
+        intent = new Intent(MainPage.this, Canteen_Activity.class);
+        startActivity(intent);
+    }
+    public void Cashier(View view)
+    {
+        intent = new Intent(MainPage.this, Cashier_activity.class);
+        startActivity(intent);
     }
 }

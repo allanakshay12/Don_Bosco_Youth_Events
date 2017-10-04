@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Don Bosco Youth - Event Client</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_cashier_activity">Cashier_activity</string>
+    <string name="title_activity_canteen_">Canteen_Activity</string>
+    <string name="title_activity_games_">Games_Activity</string>
 </resources>
