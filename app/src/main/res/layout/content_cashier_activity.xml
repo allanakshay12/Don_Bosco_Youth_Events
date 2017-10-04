@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,4 +11,29 @@
     tools:context="com.allanakshay.donboscoyouth_eventclient.Cashier_activity"
     tools:showIn="@layout/activity_cashier_activity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:text="Register New User"
+        android:id="@+id/register_new_user_button"
+        android:onClick="Register_New_User"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_below="@id/register_new_user_button"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="Recharge an Existing Account"
+        android:id="@+id/recharge_existing_account_button"
+        android:onClick="Recharge_Existing_Account"/>
+
+</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.allanakshay.donboscoyouth_eventclient.Recharge_Existing"
+    tools:showIn="@layout/activity_recharge__existing"
+    android:padding="20dp">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:id="@+id/text_input_recharge_unique_id">
+        <EditText
+            android:id="@+id/recharge_existing_unique_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:hint="Unique ID"
+            android:textSize="20dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_input_recharge_unique_id"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentLeft="true"
+        android:text="Name : "
+        android:textSize="20dp"
+        android:id="@+id/recharge_existing_name"
+        android:enabled="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recharge_existing_name"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentLeft="true"
+        android:text="Phone Number : "
+        android:textSize="20dp"
+        android:id="@+id/recharge_existing_phone_number"
+        android:enabled="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recharge_existing_phone_number"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentLeft="true"
+        android:text="Balance Amount : "
+        android:textSize="20dp"
+        android:id="@+id/recharge_existing_balance_amount"
+        android:enabled="false"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/recharge_existing_balance_amount"
+        android:id="@+id/text_input_recharge_recharge_amount">
+        <EditText
+            android:id="@+id/recharge_existing_recharge_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:hint="Recharge Amount"
+            android:textSize="20dp"
+            android:enabled="false"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recharge"
+        android:layout_below="@id/text_input_recharge_recharge_amount"
+        android:layout_marginTop="70dp"
+        android:background="@color/Button_Background"
+        android:textColor="@color/Button_Text"
+        android:textSize="20dp"/>
+
+</RelativeLayout>
+</ScrollView>

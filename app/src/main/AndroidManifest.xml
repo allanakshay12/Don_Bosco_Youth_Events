@@ -47,6 +47,14 @@
         <activity
             android:name=".Games_Activity"
             android:label="@string/title_activity_games_"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Register_New"
+            android:label="@string/title_activity_register__new"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Recharge_Existing"
+            android:label="@string/title_activity_recharge__existing"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

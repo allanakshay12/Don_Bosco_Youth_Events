@@ -4,4 +4,6 @@
     <string name="title_activity_cashier_activity">Cashier_activity</string>
     <string name="title_activity_canteen_">Canteen_Activity</string>
     <string name="title_activity_games_">Games_Activity</string>
+    <string name="title_activity_register__new">Register_New</string>
+    <string name="title_activity_recharge__existing">Recharge_Existing</string>
 </resources>

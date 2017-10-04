@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.allanakshay.donboscoyouth_eventclient.Canteen_Activity"
-    tools:showIn="@layout/activity_canteen_">
+    tools:showIn="@layout/activity_canteen_"
+    android:padding="10dp">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/text_input_canteen_unique_id">
+        <EditText
+            android:id="@+id/canteen_unique_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:hint="Unique ID"
+            android:textSize="20dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/canteen_checkout"
+        android:text="Checkout ( Rs. 0 )"
+        android:textColor="@color/Button_Text"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@color/Button_Background"
+        android:textSize="20dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_input_canteen_unique_id"
+        android:layout_marginTop="20dp"
+        android:id="@+id/canteen_list_view"
+        android:layout_above="@id/canteen_checkout">
+    </ListView>
+
+
+</RelativeLayout>
