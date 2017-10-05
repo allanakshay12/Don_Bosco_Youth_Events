@@ -17,10 +17,13 @@
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:textSize="30dp"
+        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Canteen"
         android:id="@+id/canteen_button"
+        android:background="@color/colorAccent"
+        android:textColor="@color/Button_Text"
         android:onClick="Canteen"/>
     <TextView
         android:layout_width="wrap_content"
@@ -29,9 +32,12 @@
         android:layout_below="@id/canteen_button"
         android:id="@+id/games_button"
         android:text="Games"
+        android:padding="10dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:textStyle="bold"
+        android:background="@color/colorAccent"
+        android:textColor="@color/Button_Text"
         android:onClick="Games"/>
     <TextView
         android:layout_width="wrap_content"
@@ -40,8 +46,11 @@
         android:layout_below="@id/games_button"
         android:id="@+id/cashier_button"
         android:text="Cashier"
+        android:padding="10dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
+        android:background="@color/colorAccent"
+        android:textColor="@color/Button_Text"
         android:textStyle="bold"
         android:onClick="Cashier"/>
 </RelativeLayout>
