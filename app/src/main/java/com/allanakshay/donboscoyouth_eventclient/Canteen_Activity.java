@@ -32,6 +32,7 @@ public class Canteen_Activity extends AppCompatActivity {
     TextView go;
     private DatabaseReference ref_canteen = FirebaseDatabase.getInstance().getReference().child("Canteen");
     private DatabaseReference ref_users = FirebaseDatabase.getInstance().getReference().child("Users");
+    private DatabaseReference ref_income = FirebaseDatabase.getInstance().getReference().child("Total Income");
     public static String unique_id_string;
     private Query query;
     public static String name;
@@ -211,6 +212,22 @@ public class Canteen_Activity extends AppCompatActivity {
                     checkout.setEnabled(false);
                     checkout_text.setEnabled(false);
                     balance_text_text.setText("Balance : Rs. " + (Double.parseDouble(balance) - cost) );
+                    ref_income.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            try {
+                                ref_income.child("Canteen").setValue(String.valueOf(Double.parseDouble(dataSnapshot.child("Canteen").getValue().toString())+cost));
+                            } catch (Exception e)
+                            {
+                                Toast.makeText(Canteen_Activity.this, "Error in adding total income", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
 
                             ref_users.child(unique_id_string).addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override

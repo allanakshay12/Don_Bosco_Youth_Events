@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="10dp">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="1st"
+    android:textStyle="bold"
+    android:textSize="20dp"
+    android:id="@+id/qualify_user_1st"
+    android:layout_marginTop="10dp"
+    android:layout_alignParentLeft="true"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:gravity="center"
+    android:textColor="@color/Button_Text"
+    android:background="@color/Button_Background"
+    android:padding="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3rd"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/qualify_user_3rd"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:textColor="@color/Button_Text"
+        android:background="@color/Button_Background"
+        android:padding="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2nd"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/qualify_user_2nd"
+        android:layout_toRightOf="@id/qualify_user_1st"
+        android:layout_toLeftOf="@id/qualify_user_3rd"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:textColor="@color/Button_Text"
+        android:background="@color/Button_Background"
+        android:padding="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminate"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/qualify_user_eliminate"
+        android:layout_below="@id/qualify_user_1st"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:textColor="@color/Button_Text"
+        android:background="@color/Red"
+        android:padding="10dp"/>
+
+
+</RelativeLayout>

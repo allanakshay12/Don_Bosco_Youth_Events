@@ -20,6 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Recharge_Existing extends AppCompatActivity {
     private DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users");
+    private DatabaseReference ref_income = FirebaseDatabase.getInstance().getReference().child("Total Income");
     private DatabaseReference ref2;
     private Query query;
     EditText unique_id;
@@ -130,6 +131,18 @@ public class Recharge_Existing extends AppCompatActivity {
                             try {
                                 ref2.child("Balance").setValue(String.valueOf(Double.parseDouble(dataSnapshot.child("Balance").getValue().toString()) + Double.parseDouble(recharge_amount.getText().toString().trim())));
                                 balance.setText("Balance Amount : " + String.valueOf(Double.parseDouble(dataSnapshot.child("Balance").getValue().toString()) + Double.parseDouble(recharge_amount.getText().toString().trim())));
+                                ref_income.addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(DataSnapshot dataSnapshot) {
+                                        ref_income.child("Cashier").setValue(String.valueOf(Double.parseDouble(dataSnapshot.child("Cashier").getValue().toString()) + Double.parseDouble(recharge_amount.getText().toString().trim())));
+                                        ref_income.removeEventListener(this);
+                                    }
+
+                                    @Override
+                                    public void onCancelled(DatabaseError databaseError) {
+
+                                    }
+                                });
                                 Toast.makeText(Recharge_Existing.this, "Amount Successfully Recharged", Toast.LENGTH_SHORT).show();
                                 ref2.removeEventListener(this);
 

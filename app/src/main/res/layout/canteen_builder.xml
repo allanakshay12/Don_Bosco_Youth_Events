@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:background="@color/Button_Background"
         android:padding="10dp"
-        android:text="Do you want to continue?"
+        android:text="Charge User"
         android:textColor="@color/Button_Text"
         android:textStyle="bold"
         android:id="@+id/canteen_builder_button"/>

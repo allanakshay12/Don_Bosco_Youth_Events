@@ -44,7 +44,7 @@ public class Games_Adapter extends BaseAdapter implements ListAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         View view = convertView;
         if(view==null)
         {
@@ -60,6 +60,7 @@ public class Games_Adapter extends BaseAdapter implements ListAdapter {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, Game_Selected.class);
+                intent.putExtra("Game Name", games.get(position));
                 context.startActivity(intent);
             }
         });

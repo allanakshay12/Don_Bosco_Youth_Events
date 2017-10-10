@@ -22,6 +22,7 @@ public class Register_New extends AppCompatActivity {
     private DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users");
     private DatabaseReference ref_canteen = FirebaseDatabase.getInstance().getReference().child("Canteen");
     private DatabaseReference ref_games = FirebaseDatabase.getInstance().getReference().child("Games");
+    private DatabaseReference ref_income = FirebaseDatabase.getInstance().getReference().child("Total Income");
     private Query query;
     private EditText name;
     private EditText phone_number;
@@ -81,6 +82,24 @@ public class Register_New extends AppCompatActivity {
                                         ref.child(unique_id.getText().toString().trim()).child("Games Played").child(snapshot.getKey()).setValue("0");
                                     }
                                     ref_games.removeEventListener(this);
+                                }
+
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+
+                            ref_income.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    try {
+                                        ref_income.child("Cashier").setValue(String.valueOf(Double.parseDouble(dataSnapshot.child("Cashier").getValue().toString()) + Double.parseDouble(initial_recharge.getText().toString().trim())));
+                                        ref_income.removeEventListener(this);
+                                    } catch (Exception e)
+                                    {
+                                        Toast.makeText(Register_New.this, "Error in adding total income", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
 
                                 @Override
