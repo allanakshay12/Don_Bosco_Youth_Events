@@ -63,10 +63,13 @@ public class Canteen_Adapter extends BaseAdapter implements ListAdapter {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked)
                 {
+                    Canteen_Activity.item_position.set(position, 1);
                     Canteen_Activity.cost = Canteen_Activity.cost + Double.parseDouble(price.get(position));
                 }
-                else
+                else {
+                    Canteen_Activity.item_position.set(position, 0);
                     Canteen_Activity.cost = Canteen_Activity.cost - Double.parseDouble(price.get(position));
+                }
 
                 Canteen_Activity.checkout.setText("Checkout ( Rs. " + Canteen_Activity.cost + " )");
             }

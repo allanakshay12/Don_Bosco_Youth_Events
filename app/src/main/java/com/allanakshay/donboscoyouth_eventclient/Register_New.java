@@ -20,6 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 public class Register_New extends AppCompatActivity {
 
     private DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users");
+    private DatabaseReference ref_canteen = FirebaseDatabase.getInstance().getReference().child("Canteen");
+    private DatabaseReference ref_games = FirebaseDatabase.getInstance().getReference().child("Games");
     private Query query;
     private EditText name;
     private EditText phone_number;
@@ -36,8 +38,6 @@ public class Register_New extends AppCompatActivity {
         phone_number = (EditText)findViewById(R.id.register_user_phone_number);
         unique_id = (EditText)findViewById(R.id.register_user_unique_id);
         initial_recharge = (EditText)findViewById(R.id.register_user_initial_recharge);
-
-
     }
 
     public void Register(View view)
@@ -57,6 +57,38 @@ public class Register_New extends AppCompatActivity {
                             ref.child("Overall Points").setValue("0");
                             ref = FirebaseDatabase.getInstance().getReference().child("Users");
                             Toast.makeText(Register_New.this, "User Successfully Registered", Toast.LENGTH_SHORT).show();
+                            ref_canteen.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    for(DataSnapshot snapshot : dataSnapshot.getChildren())
+                                    {
+                                        ref.child(unique_id.getText().toString().trim()).child("Items Bought").child(snapshot.getKey()).setValue("0");
+                                    }
+                                    ref_canteen.removeEventListener(this);
+                                }
+
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+
+                            ref_games.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    for(DataSnapshot snapshot : dataSnapshot.getChildren())
+                                    {
+                                        ref.child(unique_id.getText().toString().trim()).child("Games Played").child(snapshot.getKey()).setValue("0");
+                                    }
+                                    ref_games.removeEventListener(this);
+                                }
+
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+
                         } else {
                             Toast.makeText(Register_New.this, "Unique Code already exists. Please use another Unique Code.", Toast.LENGTH_SHORT).show();
                         }

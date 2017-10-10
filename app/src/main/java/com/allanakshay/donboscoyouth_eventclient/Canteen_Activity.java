@@ -1,6 +1,7 @@
 package com.allanakshay.donboscoyouth_eventclient;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -46,6 +47,9 @@ public class Canteen_Activity extends AppCompatActivity {
     private TextView balance_text_text;
     private TextView cost_text;
     private Button checkout_text;
+    public static ArrayList<Integer> item_position = new ArrayList<Integer>();
+    public static int index = 0;
+    private int i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +102,7 @@ public class Canteen_Activity extends AppCompatActivity {
                                                 checkout.setEnabled(true);
                                                 checkout_text.setEnabled(true);
                                                 Toast.makeText(Canteen_Activity.this, "User found", Toast.LENGTH_SHORT).show();
+
                                             } catch (Exception e)
                                             {
                                                 unique_id_string = "";
@@ -158,6 +163,10 @@ public class Canteen_Activity extends AppCompatActivity {
                         price.add(snapshot.child("Price").getValue().toString().trim());
 
                     }
+                    for(index=0; index<item.size(); index++)
+                    {
+                        item_position.add(0);
+                    }
                 canteen_adapter.notifyDataSetChanged();
                 } catch (Exception e)
                 {
@@ -202,6 +211,26 @@ public class Canteen_Activity extends AppCompatActivity {
                     checkout.setEnabled(false);
                     checkout_text.setEnabled(false);
                     balance_text_text.setText("Balance : Rs. " + (Double.parseDouble(balance) - cost) );
+
+                            ref_users.child(unique_id_string).addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    for(i=0; i<item.size();i++) {
+                                        if(item_position.get(i) == 1) {
+                                                ref_users.child(unique_id_string).child("Items Bought").child(item.get(i)).setValue(String.valueOf(Integer.parseInt(dataSnapshot.child("Items Bought").child(item.get(i)).getValue().toString()) + 1));
+                                        }
+                                    }
+                                    ref_users.child(unique_id_string).removeEventListener(this);
+                                }
+
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+
+
+
                 }
                 else
                 {
@@ -214,18 +243,24 @@ public class Canteen_Activity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        for(int j = 0; j<item.size(); j++)
+            item_position.set(j, 0);
         cost = 0.0;
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
+        for(int j = 0; j<item.size(); j++)
+            item_position.set(j, 0);
         cost = 0.0;
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        for(int j = 0; j<item.size(); j++)
+            item_position.set(j, 0);
         finish();
     }
 }

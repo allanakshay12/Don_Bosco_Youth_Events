@@ -12,17 +12,27 @@
     tools:showIn="@layout/activity_game__selected"
     android:padding="10dp">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/game_selected_go"
+        android:drawableLeft="@drawable/go"
+        android:background="@color/colorAccent" />
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:id="@+id/text_input_game_selected_unique_id">
+        android:layout_marginTop="70dp"
+        android:id="@+id/text_input_game_selected_unique_id"
+        android:layout_toLeftOf="@id/game_selected_go">
         <EditText
             android:id="@+id/game_selected_unique_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
-            android:enabled="false"
             android:hint="Unique ID"
             android:textSize="20dp"/>
     </android.support.design.widget.TextInputLayout>
@@ -30,7 +40,20 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Game Selected : "
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textStyle="bold"
         android:layout_below="@id/text_input_game_selected_unique_id"
+        android:background="@color/colorAccent"
+        android:textColor="@color/Button_Text"
+        android:id="@+id/game_selected_game_selected"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_selected_game_selected"
         android:layout_marginTop="30dp"
         android:text="Name : "
         android:enabled="false"
