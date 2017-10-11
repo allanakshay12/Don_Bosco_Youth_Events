@@ -21,12 +21,14 @@ public class Games_Adapter extends BaseAdapter implements ListAdapter {
     ArrayList<String> games = new ArrayList<String>();
     ArrayList<String> price = new ArrayList<String>();
     Context context;
+    String from_activity;
 
-    public Games_Adapter(ArrayList<String> games, ArrayList<String> price, Context context)
+    public Games_Adapter(ArrayList<String> games, ArrayList<String> price, Context context, String from_activity)
     {
         this.games = games;
         this.price = price;
         this.context = context;
+        this.from_activity = from_activity;
     }
     @Override
     public int getCount() {
@@ -54,16 +56,21 @@ public class Games_Adapter extends BaseAdapter implements ListAdapter {
         TextView game = (TextView) view.findViewById(R.id.game_list_item);
         TextView prices = (TextView) view.findViewById(R.id.game_list_price);
         game.setText(games.get(position));
-        prices.setText("Rs. " + price.get(position));
+        if(from_activity.equals("Game"))
+        prices.setText("Rs. "+price.get(position));
+        else
+            prices.setText(price.get(position));
         RelativeLayout click = (RelativeLayout) view.findViewById(R.id.game_list_click);
-        click.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, Game_Selected.class);
-                intent.putExtra("Game Name", games.get(position));
-                context.startActivity(intent);
-            }
-        });
+        if(from_activity.equals("Game")) {
+            click.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, Game_Selected.class);
+                    intent.putExtra("Game Name", games.get(position));
+                    context.startActivity(intent);
+                }
+            });
+        }
         return view;
     }
 }

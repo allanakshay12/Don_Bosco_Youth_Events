@@ -60,4 +60,15 @@ public class MainPage extends AppCompatActivity {
         intent = new Intent(MainPage.this, Cashier_activity.class);
         startActivity(intent);
     }
+
+    public void General_Info(View view)
+    {
+        intent = new Intent(MainPage.this, General.class);
+        startActivity(intent);
+    }
+    public void Admin_Access (View view)
+    {
+        intent = new Intent(MainPage.this, Admin_Access_Class.class);
+        startActivity(intent);
+    }
 }

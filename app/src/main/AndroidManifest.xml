@@ -59,6 +59,14 @@
         <activity
             android:name=".Game_Selected"
             android:label="@string/title_activity_game__selected"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".General"
+            android:label="@string/title_activity_general"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Admin_Access_Class"
+            android:label="@string/title_activity_admin__access__class"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

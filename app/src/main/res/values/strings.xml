@@ -7,4 +7,6 @@
     <string name="title_activity_register__new">Register_New</string>
     <string name="title_activity_recharge__existing">Recharge_Existing</string>
     <string name="title_activity_game__selected">Game_Selected</string>
+    <string name="title_activity_general">General</string>
+    <string name="title_activity_admin__access__class">Admin_Access_Class</string>
 </resources>

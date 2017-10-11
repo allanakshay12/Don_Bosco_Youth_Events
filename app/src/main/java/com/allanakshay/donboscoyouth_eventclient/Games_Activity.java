@@ -30,9 +30,10 @@ public class Games_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_games_);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        String from_activity = "Game";
         setSupportActionBar(toolbar);
         games_list = (ListView)findViewById(R.id.games_list_view);
-        games_adapter = new Games_Adapter(games, prices, this);
+        games_adapter = new Games_Adapter(games, prices, this, from_activity);
         games_list.setAdapter(games_adapter);
         ref_games.addValueEventListener(new ValueEventListener() {
             @Override
