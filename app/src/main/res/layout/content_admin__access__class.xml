@@ -56,5 +56,20 @@
         android:layout_below="@id/admin_canteen"
         android:onClick="Admin_Users"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Database Access"
+        android:textStyle="bold"
+        android:textColor="@color/Button_Text"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:id="@+id/admin_database"
+        android:layout_below="@id/admin_users"
+        android:onClick="Admin_Database"/>
+
 </RelativeLayout>
 </ScrollView>

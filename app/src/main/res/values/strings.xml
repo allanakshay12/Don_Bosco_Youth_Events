@@ -1,12 +1,16 @@
 <resources>
     <string name="app_name">Don Bosco Youth - Event Client</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_cashier_activity">Cashier_activity</string>
-    <string name="title_activity_canteen_">Canteen_Activity</string>
-    <string name="title_activity_games_">Games_Activity</string>
-    <string name="title_activity_register__new">Register_New</string>
-    <string name="title_activity_recharge__existing">Recharge_Existing</string>
-    <string name="title_activity_game__selected">Game_Selected</string>
-    <string name="title_activity_general">General</string>
-    <string name="title_activity_admin__access__class">Admin_Access_Class</string>
+    <string name="title_activity_cashier_activity">Cashier</string>
+    <string name="title_activity_canteen_">Canteen</string>
+    <string name="title_activity_games_">Games</string>
+    <string name="title_activity_register__new">New Registration</string>
+    <string name="title_activity_recharge__existing">Recharge Existing Account</string>
+    <string name="title_activity_game__selected">Games</string>
+    <string name="title_activity_general">General Information</string>
+    <string name="title_activity_admin__access__class">Admin Access</string>
+    <string name="title_activity_superuser__games">Admin Games</string>
+    <string name="title_activity_superuser__canteen">Admin Canteen</string>
+    <string name="title_activity_superuser__users">Admin Users</string>
+    <string name="title_activity_database__access">Database Access</string>
 </resources>

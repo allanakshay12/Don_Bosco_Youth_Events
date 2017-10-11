@@ -29,6 +29,7 @@
         <activity
             android:name=".MainPage"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,35 +39,66 @@
         </activity>
         <activity
             android:name=".Cashier_activity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_cashier_activity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Canteen_Activity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_canteen_"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Games_Activity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_games_"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Register_New"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_register__new"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Recharge_Existing"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_recharge__existing"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Game_Selected"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_game__selected"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".General"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_general"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Admin_Access_Class"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_admin__access__class"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Superuser_Games"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_superuser__games"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Superuser_Canteen"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_superuser__canteen"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Superuser_Users"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_superuser__users"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Database_Access"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:label="@string/title_activity_database__access"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

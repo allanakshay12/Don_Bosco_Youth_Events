@@ -35,5 +35,10 @@ public class Admin_Access_Class extends AppCompatActivity {
         intent = new Intent(Admin_Access_Class.this, Superuser_Users.class);
         startActivity(intent);
     }
+    public void Admin_Database(View view)
+    {
+        intent = new Intent(Admin_Access_Class.this, Database_Access.class);
+        startActivity(intent);
+    }
 
 }
