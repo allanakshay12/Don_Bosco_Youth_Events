@@ -19,7 +19,7 @@ public class Database_Access extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         webView = (WebView) findViewById(R.id.database_access_webview);
-        url = "https://console.firebase.google.com/project/donboscoyouthevents/analytics/app/android:com.allanakshay.donboscoyouth_eventclient/overview";
+        url = "https://console.firebase.google.com/project/donboscoyouthevents/database/data";
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadWithOverviewMode(false);
         webView.getSettings().setUseWideViewPort(true);

@@ -304,6 +304,8 @@ public class Game_Selected extends AppCompatActivity {
 
                     }
                 });
+
+                charge_user.setEnabled(false);
             }
         });
 
@@ -343,6 +345,7 @@ public class Game_Selected extends AppCompatActivity {
 
                     }
                 });
+                charge_user.setEnabled(false);
             }
         });
 
@@ -382,6 +385,7 @@ public class Game_Selected extends AppCompatActivity {
 
                     }
                 });
+                charge_user.setEnabled(false);
             }
         });
 
